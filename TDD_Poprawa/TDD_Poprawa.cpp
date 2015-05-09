@@ -31,7 +31,10 @@ public:
 	~LargestProduct();
 	//////////////////////////////////////////////
 	//Metod added only to test purpose
-
+	uint64_t publicCheckGreatness(uint64_t largestProduct, uint64_t product)
+	{
+		return checkGreatness(largestProduct, product);
+	}
 	//////////////////////////////////////////////
 private:
 	const string Number;
@@ -59,4 +62,27 @@ LargestProduct::LargestProduct() : Number("7316717653133062491922511967442657474
 
 LargestProduct::~LargestProduct()
 {
+}
+
+/*
+# Private: Function is checking witch of two number is greater
+#
+# largestProduct - Actual or previous greatest number
+# product - product of 13 number, waiting to be check with largestProduct
+#
+# Examples
+#
+#   checkGreatness(999, 111)
+#   # => 999
+#
+#	checkGreatness(555, 777)
+#   # => 777
+#
+# Returns the actual largestProduct
+*/
+uint64_t LargestProduct::checkGreatness(uint64_t largestProduct, uint64_t product)
+{
+	if (product > largestProduct)
+		largestProduct = product;
+	return largestProduct;
 }
