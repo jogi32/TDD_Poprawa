@@ -39,6 +39,10 @@ public:
 	{
 		return multiplyNumbers(i, product);
 	}
+	uint64_t publicFollowMainLoop()
+	{
+		return followMainLoop();
+	}
 	//////////////////////////////////////////////
 private:
 	const string Number;
@@ -113,4 +117,25 @@ uint64_t LargestProduct::multiplyNumbers(int i, uint64_t product)
 		product *= atol((Number.substr(j, 1)).c_str());
 	}
 	return product;
+}
+
+/*
+# Private: Function is calculating largest product of 13 number from string Number
+#
+# Examples
+#
+#   followMainLoop()
+#	# => largest value of product 13 numbers in Number string
+#
+# Returns the largestProduct product of 13 number
+*/
+uint64_t LargestProduct::followMainLoop()
+{
+	for (int i = 0; i < Number.length() - sizeProduct + 1; i++)
+	{
+		uint64_t product = 1;
+		product = multiplyNumbers(i, product);
+		largestProduct = checkGreatness(largestProduct, product);
+	}
+	return largestProduct;
 }
