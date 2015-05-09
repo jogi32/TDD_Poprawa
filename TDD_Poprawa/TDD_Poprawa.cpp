@@ -35,6 +35,10 @@ public:
 	{
 		return checkGreatness(largestProduct, product);
 	}
+	uint64_t publicMultiplyNumbers(int i, uint64_t product)
+	{
+		return multiplyNumbers(i, product);
+	}
 	//////////////////////////////////////////////
 private:
 	const string Number;
@@ -85,4 +89,28 @@ uint64_t LargestProduct::checkGreatness(uint64_t largestProduct, uint64_t produc
 	if (product > largestProduct)
 		largestProduct = product;
 	return largestProduct;
+}
+
+/*
+# Private: Function is multipling product of 13 number from string Number
+#
+# i - Actual position in checking Number string
+# product - product of 13 number
+#
+# Examples
+#
+#   multiplyNumbers(0, 1)
+#	# => value of product 13 numbers in Number string count from 0 position
+#
+#	multiplyNumbers(10, 1)
+#	# => value of product 13 numbers in Number string count from 10 position
+#
+# Returns the actual product of 13 number
+*/
+uint64_t LargestProduct::multiplyNumbers(int i, uint64_t product)
+{
+	for (int j = i; j < i + sizeProduct; j++) {
+		product *= atol((Number.substr(j, 1)).c_str());
+	}
+	return product;
 }
