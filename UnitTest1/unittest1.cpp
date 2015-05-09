@@ -10,9 +10,10 @@ namespace UnitTest1
 	{
 	public:
 		
-		TEST_METHOD(TestMethod1)
+		TEST_METHOD(run)
 		{
-			// TODO: Your test code here
+			LargestProduct test;
+			Assert::AreEqual(1, test.run());
 		}
 
 	};
