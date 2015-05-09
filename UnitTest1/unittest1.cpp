@@ -29,5 +29,11 @@ namespace UnitTest1
 			Assert::AreEqual(5000940, (int)test.publicMultiplyNumbers(0, 1));
 		}
 
+		TEST_METHOD(publicFollowMainLoop)
+		{
+			LargestProduct test;
+			Assert::AreEqual((uint64_t)23514624000, test.publicFollowMainLoop());
+		}
+
 	};
 }
