@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
+#include "..\TDD_Poprawa\TDD_Poprawa.cpp"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
