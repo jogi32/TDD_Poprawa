@@ -42,6 +42,7 @@ private:
 	uint64_t followMainLoop();
 };
 
+int main(int argc, _TCHAR* argv[])
 {
 	return 0;
 }
