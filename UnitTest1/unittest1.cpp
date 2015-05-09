@@ -15,5 +15,13 @@ namespace UnitTest1
 			Assert::AreEqual(1, test.run());
 		}
 
+		TEST_METHOD(publicCheckGreatness)
+		{
+			LargestProduct test;
+			Assert::AreEqual(888, (int)test.publicCheckGreatness(888, 567));
+			Assert::AreEqual(999, (int)test.publicCheckGreatness(999, 111));
+			Assert::AreEqual(777, (int)test.publicCheckGreatness(555, 777));
+		}
+
 	};
 }
