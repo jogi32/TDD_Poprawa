@@ -55,6 +55,9 @@ private:
 
 int main(int argc, _TCHAR* argv[])
 {
+	LargestProduct *product = new LargestProduct();
+	product->run();
+	delete product;
 	return 0;
 }
 
