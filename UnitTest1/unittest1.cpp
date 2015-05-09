@@ -23,5 +23,11 @@ namespace UnitTest1
 			Assert::AreEqual(777, (int)test.publicCheckGreatness(555, 777));
 		}
 
+		TEST_METHOD(publicMultiplyNumbers)
+		{
+			LargestProduct test;
+			Assert::AreEqual(5000940, (int)test.publicMultiplyNumbers(0, 1));
+		}
+
 	};
 }
